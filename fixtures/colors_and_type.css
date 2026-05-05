@@ -1,0 +1,302 @@
+/*
+ * M DE MAKER — Design System Tokens
+ * mdemaker.es
+ * Generated: 2026-04-27
+ *
+ * Usage: Import this file first in any project.
+ * Compatible with plain web, WordPress, and any CSS-aware framework.
+ */
+
+/* ─── Google Fonts ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* ─── Base tokens ───────────────────────────────────────────── */
+:root {
+
+  /* ── Color: Neutrals (warm paper tone — e-ink) ───────────── */
+  --color-black:        oklch(8%  0.006 80);
+  --color-ink-900:      oklch(13% 0.008 80);
+  --color-ink-800:      oklch(22% 0.008 80);
+  --color-ink-700:      oklch(34% 0.007 80);
+  --color-ink-600:      oklch(46% 0.007 80);
+  --color-ink-500:      oklch(58% 0.006 80);
+  --color-ink-400:      oklch(70% 0.006 80);
+  --color-ink-300:      oklch(80% 0.005 80);
+  --color-ink-200:      oklch(88% 0.006 80);
+  --color-ink-100:      oklch(93% 0.007 80);
+  --color-ink-50:       oklch(96% 0.008 80);
+  --color-white:        oklch(98.5% 0.006 80); /* paper white, not screen white */
+
+  /* ── Color: Yellow (Primary Accent) ──────────────────────── */
+  --color-yellow-900:   oklch(35% 0.12 92);
+  --color-yellow-700:   oklch(55% 0.17 92);
+  --color-yellow-500:   oklch(78% 0.19 92);
+  --color-yellow-400:   oklch(87% 0.19 92);   /* ← primary */
+  --color-yellow-300:   oklch(92% 0.14 92);
+  --color-yellow-100:   oklch(97% 0.06 92);
+
+  /* ── Color: Blue Celeste (Secondary Accent) ──────────────── */
+  --color-blue-900:     oklch(25% 0.09 222);
+  --color-blue-700:     oklch(44% 0.13 222);
+  --color-blue-500:     oklch(60% 0.14 222);
+  --color-blue-400:     oklch(72% 0.13 222);  /* ← secondary */
+  --color-blue-300:     oklch(82% 0.10 222);
+  --color-blue-100:     oklch(95% 0.04 222);
+
+  /* ── Color: Semantic (Light Mode) ────────────────────────── */
+  --color-background:       var(--color-white);
+  --color-surface:          var(--color-ink-50);
+  --color-surface-raised:   var(--color-white);
+  --color-border:           var(--color-ink-200);
+  --color-border-strong:    var(--color-ink-400);
+
+  --color-text-primary:     var(--color-ink-900);
+  --color-text-secondary:   var(--color-ink-600);
+  --color-text-muted:       var(--color-ink-400);
+  --color-text-on-accent:   var(--color-ink-900);
+  --color-text-inverse:     var(--color-white);
+
+  --color-primary:          var(--color-yellow-400);
+  --color-primary-hover:    var(--color-yellow-500);
+  --color-primary-subtle:   var(--color-yellow-100);
+
+  --color-secondary:        var(--color-blue-400);
+  --color-secondary-hover:  var(--color-blue-500);
+  --color-secondary-subtle: var(--color-blue-100);
+
+  --color-success:          oklch(62% 0.16 148);
+  --color-success-subtle:   oklch(95% 0.06 148);
+  --color-warning:          var(--color-yellow-400);
+  --color-warning-subtle:   var(--color-yellow-100);
+  --color-danger:           oklch(55% 0.20 24);
+  --color-danger-subtle:    oklch(96% 0.06 24);
+  --color-info:             var(--color-blue-400);
+  --color-info-subtle:      var(--color-blue-100);
+
+  /* ── Typography: Families ────────────────────────────────── */
+  --font-display:    'Space Grotesk', sans-serif;
+  --font-body:       'Lora', Georgia, serif;
+  --font-ui:         'Space Grotesk', sans-serif;
+  --font-mono:       'JetBrains Mono', 'Courier New', monospace;
+
+  /* ── Typography: Scale (Major Third — 1.250) ─────────────── */
+  --text-xs:    0.64rem;    /*  ~10.2px */
+  --text-sm:    0.80rem;    /*  ~12.8px */
+  --text-base:  1rem;       /*   16px   */
+  --text-md:    1.125rem;   /*   18px   */
+  --text-lg:    1.25rem;    /*   20px   */
+  --text-xl:    1.563rem;   /*   25px   */
+  --text-2xl:   1.953rem;   /*  ~31px   */
+  --text-3xl:   2.441rem;   /*  ~39px   */
+  --text-4xl:   3.052rem;   /*  ~49px   */
+  --text-5xl:   3.815rem;   /*  ~61px   */
+
+  /* ── Typography: Weights ─────────────────────────────────── */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* ── Typography: Line Heights ────────────────────────────── */
+  --leading-tight:   1.15;
+  --leading-snug:    1.35;
+  --leading-normal:  1.55;
+  --leading-relaxed: 1.75;
+
+  /* ── Typography: Letter Spacing ──────────────────────────── */
+  --tracking-tight:   -0.03em;
+  --tracking-snug:    -0.015em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.05em;
+  --tracking-wider:    0.12em;
+  --tracking-widest:   0.20em;
+
+  /* ── Spacing (8px base grid) ─────────────────────────────── */
+  --space-1:   0.25rem;   /*  4px  */
+  --space-2:   0.5rem;    /*  8px  */
+  --space-3:   0.75rem;   /* 12px  */
+  --space-4:   1rem;      /* 16px  */
+  --space-5:   1.25rem;   /* 20px  */
+  --space-6:   1.5rem;    /* 24px  */
+  --space-8:   2rem;      /* 32px  */
+  --space-10:  2.5rem;    /* 40px  */
+  --space-12:  3rem;      /* 48px  */
+  --space-16:  4rem;      /* 64px  */
+  --space-20:  5rem;      /* 80px  */
+  --space-24:  6rem;      /* 96px  */
+  --space-32:  8rem;      /* 128px */
+
+  /* ── Border Radius (e-ink: generously rounded) ───────────── */
+  --radius-none:  0;
+  --radius-sm:    6px;
+  --radius-base:  10px;
+  --radius-md:    14px;
+  --radius-lg:    20px;
+  --radius-xl:    28px;
+  --radius-full:  9999px;
+
+  /* ── Borders (always 1px — e-ink discipline) ─────────────── */
+  --border-width:        1px;
+  --border-width-strong: 1.5px;
+  --border:              1px solid var(--color-border);
+  --border-strong:       1.5px solid var(--color-border-strong);
+  --border-accent:       1.5px solid var(--color-primary);
+
+  /* ── Shadows (e-ink: NO blur, only crisp outlines) ───────── */
+  /* Depth is expressed via border darkness, not shadow distance */
+  --shadow-sm:   0 0 0 1px var(--color-border);
+  --shadow-base: 0 0 0 1px var(--color-ink-200);
+  --shadow-md:   0 0 0 1.5px var(--color-ink-300);
+  --shadow-raised: 0 0 0 1.5px var(--color-ink-400);
+  --shadow-raised-accent: 0 0 0 1.5px var(--color-primary);
+
+  /* ── Transitions ──────────────────────────────────────────── */
+  --transition-fast:   100ms ease;
+  --transition-base:   180ms ease;
+  --transition-slow:   320ms ease;
+
+  /* ── Layout ───────────────────────────────────────────────── */
+  --container-sm:    640px;
+  --container-md:    768px;
+  --container-lg:    1024px;
+  --container-xl:    1280px;
+  --container-2xl:   1440px;
+}
+
+/* ─── Dark Mode ─────────────────────────────────────────────── */
+/* M DE MAKER es una identidad de fondo papel — no dark mode por defecto.
+   El bloque [data-theme="dark"] se mantiene como fallback de accesibilidad
+   pero no se activa automáticamente vía media query. */
+
+/* ─── Force dark mode via class ─────────────────────────────── */
+.dark,
+[data-theme="dark"] {
+  --color-background:       var(--color-ink-900);
+  --color-surface:          var(--color-ink-800);
+  --color-surface-raised:   oklch(18% 0.008 264);
+  --color-border:           var(--color-ink-700);
+  --color-border-strong:    var(--color-ink-500);
+
+  --color-text-primary:     var(--color-white);
+  --color-text-secondary:   var(--color-ink-300);
+  --color-text-muted:       var(--color-ink-500);
+  --color-text-on-accent:   var(--color-ink-900);
+  --color-text-inverse:     var(--color-ink-900);
+
+  --color-primary-subtle:   oklch(22% 0.08 92);
+  --color-secondary-subtle: oklch(20% 0.07 222);
+
+  --color-success-subtle:   oklch(18% 0.06 148);
+  --color-warning-subtle:   oklch(22% 0.08 92);
+  --color-danger-subtle:    oklch(18% 0.06 24);
+  --color-info-subtle:      oklch(20% 0.07 222);
+}
+
+/* ─── Base resets & element defaults ────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  margin: 0;
+}
+
+/* ─── Semantic Typography ────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-snug);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-4);
+  font-weight: var(--weight-semibold);
+}
+
+h1 { font-size: var(--text-4xl); letter-spacing: var(--tracking-tight); font-weight: var(--weight-bold); }
+h2 { font-size: var(--text-3xl); }
+h3 { font-size: var(--text-2xl); }
+h4 { font-size: var(--text-xl); }
+h5 { font-size: var(--text-lg); }
+h6 { font-size: var(--text-base); font-weight: var(--weight-medium); }
+
+p  { margin: 0 0 var(--space-4); line-height: var(--leading-relaxed); }
+
+.lead {
+  font-size: var(--text-lg);
+  font-family: var(--font-display);
+  font-weight: var(--weight-light);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.overline {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.label {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+code {
+  background: var(--color-surface);
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-sm);
+  border: var(--border);
+}
+
+pre {
+  background: var(--color-surface);
+  padding: var(--space-6);
+  border-radius: var(--radius-base);
+  border: var(--border);
+  overflow-x: auto;
+  line-height: var(--leading-relaxed);
+}
+
+a {
+  color: var(--color-text-primary);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--color-primary);
+  transition: text-decoration-color var(--transition-fast);
+}
+a:hover { text-decoration-color: var(--color-text-primary); }
+
+hr {
+  border: none;
+  border-top: var(--border);
+  margin: var(--space-8) 0;
+}
+
+blockquote {
+  margin: 0 0 var(--space-6);
+  padding-left: var(--space-6);
+  border-left: 3px solid var(--color-primary);
+  font-style: italic;
+  color: var(--color-text-secondary);
+}

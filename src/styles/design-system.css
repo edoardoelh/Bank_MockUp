@@ -1,0 +1,10 @@
+/*
+ * Design system entry point.
+ * Imports M DE MAKER tokens and component classes from fixtures.
+ * These files are NOT committed (fixtures/ is in .gitignore) —
+ * in production they would be copied to public/ or served as static assets.
+ */
+
+/* Served from fixtures/ mapped to publicDir in vite.config.ts */
+@import '../../fixtures/colors_and_type.css';
+@import '../../fixtures/components.css';
